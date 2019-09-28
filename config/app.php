@@ -228,4 +228,8 @@ return [
 
     ],
 
+    // To view app error log on Heroku dashboard
+
+    'log' => 'errorLog'
+
 ];
