@@ -16,6 +16,9 @@ class CreateTopicsTable extends Migration
         Schema::create('topics', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->timestamps();
+            $table->text('text');
+            $table->integer('category')->unsigned();
+            $table->foreign('category')->references('id')->on('categories')->onDelete('cascade');
         });
     }
 
